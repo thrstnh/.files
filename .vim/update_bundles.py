@@ -51,8 +51,8 @@ def _check(code, msg):
 
 def update_bundles():
     r'''clone or update bundles '''
-    chdir(bundles_dir)
     for bundle in git_bundles:
+        chdir(bundles_dir)
         name = bundle.split('/')[-1]
         bpath = join(bundles_dir, bundle.split('/')[-1])
         if exists(bpath):

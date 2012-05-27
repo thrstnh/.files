@@ -54,7 +54,7 @@ def update_bundles():
     for bundle in git_bundles:
         chdir(bundles_dir)
         name = bundle.split('/')[-1]
-        bpath = join(bundles_dir, bundle.split('/')[-1])
+        bpath = join(bundles_dir, name)
         if exists(bpath):
             print(':pull updates  :{}'.format(name), end='  ')
             chdir(bpath)

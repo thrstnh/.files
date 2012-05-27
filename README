@@ -1,3 +1,9 @@
-first lines for this project. initial import.
+!USE AT YOUR OWN RISK!
 
-run install.sh
+BACKUP YOUR FILES:
+- ~/.vimrc      # file
+- ~/.vim        # dir
+
+git clone https://github.com/thrstnh/.files dotfiles
+cd dotfiles/
+./install.sh

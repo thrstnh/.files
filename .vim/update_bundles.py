@@ -59,13 +59,11 @@ def update_bundles():
             print(':pull updates  :{}'.format(name), end='  ')
             chdir(bpath)
             cmd = 'git pull'
-            code, msg = commands.getstatusoutput(cmd)
-            _check(code, msg)
         else:
             print(':clone  :{}'.format(name), end='  ')
             cmd = 'git clone {} {}'.format(bundle, bpath)
-            code, msg = commands.getstatusoutput(cmd)
-            _check(code, msg)
+        code, msg = commands.getstatusoutput(cmd)
+        _check(code, msg)
     print('done.')
 
 

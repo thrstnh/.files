@@ -31,7 +31,8 @@ git_bundles = [
         'https://github.com/vim-scripts/taglist.vim',
         'https://github.com/vim-scripts/TaskList.vim',
         'https://github.com/vim-scripts/PyChimp',
-        'https://github.com/vim-scripts/Vimpy--Stoner']
+        'https://github.com/vim-scripts/Vimpy--Stoner',
+        'https://github.com/taq/vim-git-branch-info']
 
 
 def create_ctags():

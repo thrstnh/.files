@@ -174,7 +174,15 @@ if has("gui_running")
     " no noises
     set noerrorbells
     " status line
-    set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+    set statusline= "clear it first
+    set statusline+=%<%{fugitive#statusline()}
+    set statusline+=\ [%F%m%r%h%w]
+    set statusline+=\ [FORMAT=%{&ff}] 
+    set statusline+=\ [TYPE=%Y] 
+    set statusline+=\ [ASCII=\%03.3b] 
+    set statusline+=\ [HEX=\%02.2B] 
+    set statusline+=\ [POS=%04l,%04v][%p%%] 
+    set statusline+=\ [LEN=%L]
     " always show the status line
     set laststatus=2
 endif
@@ -298,6 +306,14 @@ endfunction
 
 
 " python settings
+let g:python_highlight_builtins = 1
+let g:python_highlight_exceptions = 1
+let g:python_highlight_string_formatting = 1
+let g:python_highlight_string_format = 1
+let g:python_highlight_string_templates = 1
+let g:python_highlight_indent_errors = 1
+let g:python_highlight_space_errors = 1
+let g:python_highlight_doctests = 1
 function! s:mpython_settings()
     " PEP8
     setlocal noic
@@ -307,14 +323,7 @@ function! s:mpython_settings()
     setlocal textwidth=80
     setlocal smarttab
     setlocal expandtab
-    " code completion
     set omnifunc=pythoncomplete#Complete
-    " python extra
-    if has("eval") 
-        let python_highlight_all = 1 
-        let python_slow_sync = 1
-        let python_space_errors = 1
-    endif
 endfunction
 
 

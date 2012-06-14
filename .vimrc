@@ -266,6 +266,7 @@ autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:NERDTreeWinSize = 40
 inoremap <C-Space> <C-x><C-o>
+let NERDTreeIgnore = ['\.pyc$']
 
 
 """"""""""""""""""""""

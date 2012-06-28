@@ -155,7 +155,7 @@ if has("gui_running")
     set guioptions-=T
     " no menu
     "set guioptions-=m
-    " show matching brackets
+     show matching brackets
     set showmatch
     " how many tenths of a second to blink matching brackets for
     set mat=5
@@ -164,9 +164,9 @@ if has("gui_running")
     " and do highlight as you type you search phrase
     set incsearch
     " n lines tall
-    set lines=42
+    set lines=63
     " n cols wide
-    set columns=165
+    set columns=115
     " keep n lines(bottom/top) for scope
     set so=3
     " dont blink

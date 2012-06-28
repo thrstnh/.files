@@ -154,8 +154,8 @@ if has("gui_running")
     " no toolbar
     set guioptions-=T
     " no menu
-    "set guioptions-=m
-     show matching brackets
+    set guioptions-=m
+    " show matching brackets
     set showmatch
     " how many tenths of a second to blink matching brackets for
     set mat=5
